@@ -10,7 +10,7 @@ This repository provides information for downloading and interacting with mini-M
 
 ## About mini-MusicNet
 
-The mini-MusicNet dataset can be downloaded [here](https://drive.google.com/drive/folders/10Cz6As5hiFkRZKA3hrv9qBH5tn0OC3H1?usp=sharing). To follow the tutorial in the next section or run ``explore.ipynb``, please download mini-MusicNet to a ``minimusic`` sub-directory of the root of this repository.
+The mini-MusicNet dataset can be downloaded [here](https://drive.google.com/drive/folders/10Cz6As5hiFkRZKA3hrv9qBH5tn0OC3H1?usp=sharing). To follow the tutorial in the next section or run ``explore.ipynb``, please download mini-MusicNet to the ``minimusic`` sub-directory of the root of this repository.
 
 This dataset consists of n = 82,500 data points with d = 4,096 features and k = 128 binary labels per datapoint. Each data point is an approximately 9ms audio clip: these clips are sampled at regular intervals from the underlying MusicNet dataset. Each clip is normalized to amplitudes in [-1,1]. The label on a datapoint is a binary k-dimensional (multi-hot) vector that indicates the notes being performed at the center of the audio clip. We define train, validation, and test splits with n = 62,500, 10,000, and 10,000 data points respectively. The mini-MusicNet dataset can be acquired [here](https://drive.google.com/drive/folders/10Cz6As5hiFkRZKA3hrv9qBH5tn0OC3H1?usp=sharing). Alternatively, you can use `construct.py` to reconstruct mini-MusicNet from a copy of [MusicNet](https://zenodo.org/record/5120004).
 
