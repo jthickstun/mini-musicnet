@@ -30,7 +30,7 @@ To get started, let's load and visualize the training data. The contents of this
     ax[1].set_title('Fourier transform of the raw features')
     ax[1].plot(np.abs(np.fft.rfft(Xtrain[0])[0:256])) # clip to 256 features for easier visualization
 
-![](assets/fft_pr.png)
+![](assets/features.png)
 
 Now let's see how linear (ridge) regression performs on the raw audio features. We'll measure results using [average precision](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.average_precision_score.html). 
 
