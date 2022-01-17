@@ -45,10 +45,8 @@ Now let's see how linear (ridge) regression performs on the raw audio features. 
     print('Train AP:', round(average_precision_score(Ytrain, np.dot(Xtrain, beta), average='micro'), 2))
     print('Test AP:', round(average_precision_score(Ytest, np.dot(Xtest, beta), average='micro'), 2))
 
-Results:
-
-    Train AP: 0.19
-    Test AP: 0.04
+> Train AP: 0.19
+> Test AP: 0.04
 
 That's not so great. We can do much better by transforming our audio wave to the [Fourier](https://en.wikipedia.org/wiki/Fourier_transform) domain.
 
@@ -61,10 +59,8 @@ That's not so great. We can do much better by transforming our audio wave to the
     print('Train AP:', round(average_precision_score(Ytrain, np.dot(Xtrainfft, beta), average='micro'), 2))
     print('Test AP:', round(average_precision_score(Ytest, np.dot(Xtestfft, beta), average='micro'), 2))
 
-Results:
-
-    Train AP: 0.57
-    Test AP: 0.47
+> Train AP: 0.57
+> Test AP: 0.47
 
 Finally, it can often be more revealing to look at a precision-recall curve, rather than the scalar average precision (the area under the P/R curve). Let's see what our full P/R curve looks like for ridge regression on Fourier features.
 
